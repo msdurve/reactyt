@@ -1,6 +1,6 @@
-import Expense from "./components/Expense";
+import ExpensesData from "./Component/Expense/ExpensesData";
 
-function App() {
+const App = () => {
   const expensesArr = [
     {
       id: "e1",
@@ -25,8 +25,8 @@ function App() {
   return (
     <div>
       <h1>Expense Tracker</h1>
-      <Expense expenses={expensesArr} />
+      <ExpensesData expenses={expensesArr} />
     </div>
   );
-}
+};
 export default App;
