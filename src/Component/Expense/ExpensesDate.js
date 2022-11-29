@@ -1,5 +1,5 @@
 import "./ExpensesDate.css";
-function ExpensesDate(props) {
+const ExpensesDate = (props) => {
   const year = props.date.getFullYear();
   const month = props.date.getMonth();
   const day = props.date.getDate();
@@ -10,6 +10,6 @@ function ExpensesDate(props) {
       <div className="expenses-date__day">{day}</div>
     </div>
   );
-}
+};
 
 export default ExpensesDate;
