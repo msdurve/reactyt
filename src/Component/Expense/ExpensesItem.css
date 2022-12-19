@@ -35,6 +35,12 @@
     border-radius: 12px;
   }
   
+  .but1{
+    padding-left: 0;
+    background-color: #40005d;
+    color: aqua;
+  }
+  
   @media (min-width: 580px) {
     .expense-item__description {
       flex-direction: row;
