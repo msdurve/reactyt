@@ -42,9 +42,11 @@ const ExpenseForm = (props) => {
     // the event.preventDefault()  method is used to prevent the request to server i.e is the local host 3000, why are we using in this project is that we have to stop the localhost to stop reloading
     event.preventDefault();
 
+    //the expenseData function is the user input that are stored in some value
+    //for example the title is a variable where the user input is stored
     const expenseData = {
       title: enteredTitle, // the enteredTitle will be the "" , i.e an empty value or string
-      date: enteredDate,
+      date: new Date(enteredDate),
       amount: enteredAmount,
     };
     // console.log(expenseData);
