@@ -1,6 +1,6 @@
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
-import React from "react";
+import React,{useState} from "react";
 const NewExpense = (props) => {
   const onSaveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
@@ -9,11 +9,16 @@ const NewExpense = (props) => {
     };
     //console.log(expenseData);
     props.onAddExpense(expenseData);
+    setIsEditing(false)
   };
+  const [isEditing, setIsEditing] = useState(false)
+  const listHandlerButton =() => {setIsEditing(true)}
+  const onClickCancelButton = () => {setIsEditing(false)};
   return (
     <div className="new-expense">
-      <ExpenseForm onSaveExpenseData={onSaveExpenseDataHandler} />
-      {/* here we are making custom event Handlers using custom name */}
+      {!isEditing && <button onClick={listHandlerButton}>Add New Expense</button>}
+      {isEditing && <ExpenseForm onSaveExpenseData={onSaveExpenseDataHandler} 
+      onCancel={onClickCancelButton} />}
     </div>
   );
 };

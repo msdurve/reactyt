@@ -9,7 +9,9 @@ const ExpensesItem = (props) => {
   //   setTitle("Updated");
   //   console.log("Clicked!!!");
   // };
+  console.log(props.date);
   return (
+    <li>
     <Card className="expense-item ">
       <div>
         <ExpensesDate date={props.date} />
@@ -18,12 +20,8 @@ const ExpensesItem = (props) => {
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-      {/* <div className="but1">
-        <button className="button" onClick={clickHandler}>
-          Change Title
-        </button>
-      </div> */}
     </Card>
+    </li>
   );
 };
 
