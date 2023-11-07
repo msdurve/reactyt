@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Component",
+    "\\Component\\Chart",
+    "\\Component\\Expense",
+    "\\Component\\NewExpensefolder",
+    "\\Component\\UI"
   ],
-  "SelectedNode": "\\index.js",
+  "SelectedNode": "\\Component\\Expense\\ExpensesItem.js",
   "PreviewInSolutionExplorer": false
 }
